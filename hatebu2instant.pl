@@ -42,6 +42,7 @@ sub init {
 sub fetch_entriies_from_hatebu {
     say("--> Fetching entries from HatenaBookmark");
     my $ua                  = LWP::UserAgent->new;
+    $ua->agent('Mozilla/8.0');
     my $hatebu_api_endpoint = URI->new($HATEBU_API_ENDPINT);
     my $res                 = $ua->get($HATEBU_API_ENDPINT);
 
